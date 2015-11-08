@@ -46,19 +46,21 @@ $.getJSON(url, function(data) {
  document.getElementById("Page5").addEventListener("click", function(){
     selectPage(4);
 });
-  
-  
-  //document.getElementById("Page1").attachEvent("onclick", selectPage());
-  
-  
-//  document.getElementById("Page2").attachEvent("onclick", selectPage(1));
-//  document.getElementById("Page3").addEventListener("click", selectPage(2));
-//  document.getElementById("Page4").addEventListener("click", selectPage(3));
-//  document.getElementById("Page5").addEventListener("click", selectPage(4));
  
-  
    function selectPage(x){
-    document.getElementById("PageHeader").innerHTML = obj.Pages[x].title; 
+    var selector = obj.Pages[x];  
+    document.getElementById("PageHeader").innerHTML = selector.title; 
+    var content = document.getElementById("Content");
+    var i;
+       
+   for(i =0 ; i<selector.data.length ; i++){
+   if(selector.data[i].type === "p"){
+        var p = document.createElement("p");
+        var node = document.createTextNode(selector.data[i].text);
+        p.appendChild(node);
+        content.appendChild(p);    
+   }
+   } 
    }
     
     

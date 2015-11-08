@@ -2,7 +2,7 @@
 {
   "Pages":
   [{
-  "title":"WRT 102",
+  "title":"Introduction",
   "data":[
       {"type":"h1",
 	"text":"Some Words"
@@ -70,7 +70,7 @@
 }]
   },
   {
-  "title":"Introduction",
+  "title":"WRT 102",
   "data":[
       {"type":"h1",
 	"text":"Some Words"
