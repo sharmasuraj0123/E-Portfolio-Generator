@@ -70,9 +70,6 @@ $.getJSON(url, function(data) {
         p.appendChild(node);
         content.appendChild(p);    
    }
-   else if (selector.data[i].type === "p"){
-       
-   }
    else if (selector.data[i].type === "li"){
        
    }
@@ -82,10 +79,16 @@ $.getJSON(url, function(data) {
    else if (selector.data[i].type === "image"){
       var img = document.createElement("img");
       img.src = selector.data[i].src;
+      img.width = selector.data[i].width;
+      img.height =selector.data[i].height;
       content.appendChild(img); 
    }
    else if (selector.data[i].type === "video"){
-       
+       var video = document.createElement("iframe");
+       video.src = selector.data[i].src;
+      video.width = selector.data[i].width;
+      video.height =selector.data[i].height;
+      content.appendChild(video); 
    }
    else{
        

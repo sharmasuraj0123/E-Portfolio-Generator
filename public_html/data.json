@@ -14,8 +14,8 @@
 {
 "type":"image",
 "src":"images/slide_show_images/ArchesUtah.jpg",
-"width":"24",
-"height":"30"
+"width":"500",
+"height":"200"
 }]
   }, 
  {
@@ -29,10 +29,10 @@
   "text":"a paragraph"
   },
 {
-"type":"image",
-"src":"dasadada.jpg",
-"width":"24",
-"height":"30"
+"type":"video",
+"src":"http://www.youtube.com/embed/XGSy3_Czz8k",
+"width":"500",
+"height":"500"
 }]
   },
 {
