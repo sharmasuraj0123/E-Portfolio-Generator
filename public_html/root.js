@@ -48,17 +48,47 @@ $.getJSON(url, function(data) {
 });
  
    function selectPage(x){
-    var selector = obj.Pages[x];  
-    document.getElementById("PageHeader").innerHTML = selector.title; 
-    var content = document.getElementById("Content");
-    var i;
        
+       var content = document.getElementById("Content");
+    while (content.firstChild) {
+    content.removeChild(content.firstChild);
+    }   
+    var selector = obj.Pages[x];
+    
+    
+    var header = document.createElement("h1");
+       var title = document.createTextNode(selector.title);
+       header.appendChild(title);
+       content.appendChild(header);  
+
+    
+    var i;   
    for(i =0 ; i<selector.data.length ; i++){
    if(selector.data[i].type === "p"){
         var p = document.createElement("p");
         var node = document.createTextNode(selector.data[i].text);
         p.appendChild(node);
         content.appendChild(p);    
+   }
+   else if (selector.data[i].type === "p"){
+       
+   }
+   else if (selector.data[i].type === "li"){
+       
+   }
+   else if (selector.data[i].type === "a"){
+       
+   }
+   else if (selector.data[i].type === "image"){
+      var img = document.createElement("img");
+      img.src = selector.data[i].src;
+      content.appendChild(img); 
+   }
+   else if (selector.data[i].type === "video"){
+       
+   }
+   else{
+       
    }
    } 
    }
