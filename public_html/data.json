@@ -4,8 +4,10 @@
   [{
   "title":"Introduction",
   "data":[
-      {"type":"h1",
-	"text":"Some Words"
+      {"type":"image",
+        "src":"images/slide_show_images/ArchesUtah.jpg",
+        "width":"500",
+        "height":"200"
       },
   {
   "type":"p",
@@ -30,7 +32,7 @@
   },
 {
 "type":"video",
-"src":"http://www.youtube.com/embed/XGSy3_Czz8k",
+"src":"https://www.youtube.com/embed/Go7gn6dugu0",
 "width":"500",
 "height":"500"
 }]
@@ -55,9 +57,12 @@
   {
   "title":"CSE 220",
   "data":[
-      {"type":"h1",
-	"text":"Some Words"
-      },
+      {
+        "type":"ul",
+        "list":[
+           {"li": "MIPS"},
+            {"li": "Circuit Analysis"
+      }]},
   {
   "type":"p",
   "text":"a paragraph"

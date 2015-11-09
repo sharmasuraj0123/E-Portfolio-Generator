@@ -70,8 +70,17 @@ $.getJSON(url, function(data) {
         p.appendChild(node);
         content.appendChild(p);    
    }
-   else if (selector.data[i].type === "li"){
+   else if (selector.data[i].type === "ul"){
+       var ul = document.createElement("ul"); 
+       var j;
        
+       for(j = 0 ; j < selector.data[i].list.length ; j++){
+            var li = document.createElement("li");
+            li.innerHTML = selector.data[i].list[j].li;
+            ul.appendChild(li);
+            content.appendChild(ul);
+        }
+        
    }
    else if (selector.data[i].type === "a"){
        
