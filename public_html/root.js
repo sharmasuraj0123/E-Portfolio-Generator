@@ -57,17 +57,14 @@ $.getJSON(url, function(data) {
     
     
     var header = document.createElement("h1");
-       var title = document.createTextNode(selector.title);
-       header.appendChild(title);
+       header.innerHTML= selector.title;
        content.appendChild(header);  
-
     
     var i;   
    for(i =0 ; i<selector.data.length ; i++){
    if(selector.data[i].type === "p"){
         var p = document.createElement("p");
-        var node = document.createTextNode(selector.data[i].text);
-        p.appendChild(node);
+        p.innerHTML = selector.data[i].text;
         content.appendChild(p);    
    }
    else if (selector.data[i].type === "ul"){
